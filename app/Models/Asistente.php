@@ -7,6 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Asistente extends Model
 {
-    protected $table = "asistentes";
-   
+   public $fillable = [
+    'asistente_id',
+    'first_name',
+    'last_name',
+    'document',
+    'profesion',
+    'email',
+    'phone',
+    'city',
+    'state',
+    'type_assist'];
 }

@@ -7,6 +7,13 @@
 @stop
 
 @section('content')
+
+<!-- @if(Session::has('success'))
+                    <div class="alert alert-success text-center">
+                        {{Session::get('success')}}
+                    </div>
+                @endif             -->
+
    <a href="asistentes/create" class="btn btn-primary mb-3">CREAR</a>
 
 <table id="accesos" class="table table-striped table-bordered shadow-lg mt-4" style="width:100%">

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Asistente;
 use Illuminate\Http\Request;
-
+use App\Http\Requests\CrearAsistentesRequest;
 class AsistenteController extends Controller
 {
     /**
@@ -34,7 +34,7 @@ class AsistenteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request  $request)
     {
         $asistentes = new Asistente();
 
@@ -51,7 +51,9 @@ class AsistenteController extends Controller
 
         $asistentes->save();
 
-        return redirect('/asistentes');
+        return redirect('/asistentes')->with('success', 'Formulario validado exitosamente!');
+        // return redirect('/asistentes')->back()->with('success', 'Formulario validado exitosamente!');
+       
     }
 
     /**

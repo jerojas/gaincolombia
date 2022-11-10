@@ -19,12 +19,12 @@ return new class extends Migration
             $table->integer('asistente_id')->unique();
             $table->string("first_name");
             $table->string("last_name");
-            $table->string("profesion");
+            $table->string("profesion")->nullable();
             $table->string("email");
-            $table->string("phone");
-            $table->string("city");
-            $table->string("state");
-            $table->string("type_assist");
+            $table->string("phone")->nullable();
+            $table->string("city")->nullable();
+            $table->string("state")->nullable();
+            $table->string("type_assist")->nullable();
             $table->timestamps();
         });
     }

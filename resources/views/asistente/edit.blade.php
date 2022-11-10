@@ -1,13 +1,13 @@
 @extends('adminlte::page')
 
-@section('title', 'Accesos')
+@section('title', 'Asistentes')
 
 @section('content_header')
     <h1>Editar Acceso</h1>
 @stop
 
 @section('content')
-   <form action="/accesos/{{$acceso->id}}" method="POST">    
+   <form action="/asistentes/{{$acceso->id}}" method="POST">    
    @csrf
    @method('PUT')
   <div class="mb-3">
