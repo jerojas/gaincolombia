@@ -18,7 +18,8 @@ class AsistenteController extends Controller
     public function index()
     {
       $asistentes= Asistente::all();
-      return view('asistente.index')->with('asistentes',$asistentes);
+
+       return view('asistente.index')->with('asistentes',$asistentes);
     }
 
     /**

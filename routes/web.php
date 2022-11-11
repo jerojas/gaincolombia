@@ -36,10 +36,10 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/home', function () {
-        return view('dashboard.index');
-    })->name('home');
-
+    // Route::get('/dashbard', function () {
+    //     return view('dashboard.index');
+    // })->name('dashboard');
+    Route::get('home','App\Http\Controllers\HomeController@index');
 
 });
 

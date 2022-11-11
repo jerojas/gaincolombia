@@ -219,7 +219,7 @@ $(document).ready(function() {
 //             'excel', 'pdf'
 //         ]
 
-"order": [[4, "desc" ]]//Ordenar (columna,orden)
+// "order": [[4, "desc" ]]//Ordenar (columna,orden)
         
     });
 } );

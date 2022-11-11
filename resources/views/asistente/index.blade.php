@@ -101,6 +101,8 @@ dom: 'Bfrtip',
         buttons: [
             'excel', 'pdf'
         ]
+
+        
         
     });
 } );
