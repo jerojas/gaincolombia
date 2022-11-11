@@ -3,11 +3,11 @@
 @section('title', 'Asistentes')
 
 @section('content_header')
-    <h1>Editar Acceso</h1>
+    <h1>Editar Asistente</h1>
 @stop
 
 @section('content')
-   <form action="/asistentes/{{$acceso->id}}" method="POST">    
+   <form action="/asistentes/{{$asistente->id}}" method="POST">    
    @csrf
    @method('PUT')
   <div class="mb-3">
