@@ -20,11 +20,14 @@ Route::get('/', function () {
 }); 
 
 Route::resource('asistentes','App\Http\Controllers\AsistenteController');
+Route::resource('home','App\Http\Controllers\HomeController');
 Route::resource('accesos','App\Http\Controllers\AccesoController');
 Route::resource('ingresos','App\Http\Controllers\IngresoController');
 Route::get('/controlacceso/{id}', 'App\Http\Controllers\IngresoController@index');
 Route::get('/ingresos/{id}', 'App\Http\Controllers\IngresoController@store');
 Route::get('/checkin/{id}', 'App\Http\Controllers\IngresoController@checkin');
+
+Route::post('dash', 'App\Http\Controllers\HomeController@dash');
 
 
 

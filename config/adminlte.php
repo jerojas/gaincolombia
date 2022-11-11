@@ -253,7 +253,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'accesos',
+    'dashboard_url' => 'home',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -306,14 +306,10 @@ return [
             'type' => 'sidebar-menu-search',
             'text' => 'Buscar',
         ],
-        [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
+       
         [
             'text'        => 'Dashboard',
-            'url'         => '/dashboard',
+            'url'         => '/home',
             'icon'        => 'far fa-fw fa-file',
            
         ],

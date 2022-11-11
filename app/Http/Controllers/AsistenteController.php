@@ -6,6 +6,7 @@ use App\Models\Asistente;
 use Illuminate\Http\Request;
 use App\Http\Requests\CrearAsistentesRequest;
 use Illuminate\Support\Facades\DB;
+Use Session;
 
 class AsistenteController extends Controller
 {
@@ -38,22 +39,40 @@ class AsistenteController extends Controller
      */
     public function store(Request  $request)
     {
-        $asistentes = new Asistente();
 
-        $asistentes->asistente_id = $request->get('asistente_id');
-        $asistentes->first_name = $request->get('first_name');
-        $asistentes->last_name = $request->get('last_name');
-        $asistentes->document = $request->get('document');
-        $asistentes->profesion = $request->get('profesion');
-        $asistentes->email = $request->get('email');
-        $asistentes->phone = $request->get('phone');
-        $asistentes->city = $request->get('city');
-        $asistentes->state = $request->get('state');
-        $asistentes->type_assist = $request->get('type_assist');
+        $asistente = $request->get('asistente_id');
+        $validar_asistente = DB::table('asistentes')
+        ->select('asistente_id')
+        ->where('asistente_id', '=', $asistente)
+        ->get();
 
-        $asistentes->save();
+        if(count($validar_asistente) >= 1){
 
-        return redirect('/asistentes')->with('success', 'Formulario validado exitosamente!');
+            Session::flash('message','CODIGO USADO'); 
+          return view('asistente.create') ->with('error','EL CÓDIGO YA EXISTE');
+          
+
+        }else{
+
+            $asistentes = new Asistente();
+
+            $asistentes->asistente_id = $request->get('asistente_id');
+            $asistentes->first_name = $request->get('first_name');
+            $asistentes->last_name = $request->get('last_name');
+            $asistentes->document = $request->get('document');
+            $asistentes->profesion = $request->get('profesion');
+            $asistentes->email = $request->get('email');
+            $asistentes->phone = $request->get('phone');
+            $asistentes->city = $request->get('city');
+            $asistentes->state = $request->get('state');
+            $asistentes->type_assist = $request->get('type_assist');
+            $asistentes->user =\Auth::user()->name;
+    
+            $asistentes->save();
+    
+            return redirect('/asistentes')->with('success', 'Formulario validado exitosamente!');
+         
+        }
         // return redirect('/asistentes')->back()->with('success', 'Formulario validado exitosamente!');
        
     }
@@ -119,8 +138,12 @@ class AsistenteController extends Controller
      * @param  \App\Models\Asistente  $asistente
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Asistente $asistente)
+    public function destroy($id)
     {
-        //
+        $asistente = Asistente::find($id);
+        $asistente ->delete();
+
+         
+        return redirect()->back()->with('eliminar','ok');
     }
 }

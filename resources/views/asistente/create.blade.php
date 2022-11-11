@@ -7,6 +7,13 @@
 @stop
 
 @section('content')
+<div class="row">
+  @isset($error)
+  <div style='color:white; background:red' class="col">
+      {{$error}}
+      </div>
+  @endisset
+      </div>
 
 <form action="{{url('asistentes')}}" method="POST">
   @csrf
@@ -71,6 +78,7 @@
   <button type="submit" class="btn btn-primary" tabindex="12">Guardar</button>
 </form>
 @stop
+
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">

@@ -79,7 +79,15 @@
 <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
 
 
-
+@if (session('eliminar') === 'ok')
+<script>
+Swal.fire(
+      'Eliminado!',
+      'Asistente Eliminado.',
+      'success'
+    )
+</script>
+@endif
 
 <script>
 $(document).ready(function() {
@@ -89,36 +97,26 @@ $(document).ready(function() {
   'url' : '//cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json'
 },
 
-// dom: 'Bfrtip',
-//         buttons: [
-//             'copy', 'csv', 'excel', 'pdf', 'print'
-//         ]
+dom: 'Bfrtip',
+        buttons: [
+            'excel', 'pdf'
+        ]
         
     });
 } );
 
-
-@if (session('eliminar') === 'ok')
-<script>
-Swal.fire(
-      'Deleted!',
-      'Your file has been deleted.',
-      'success'
-    )
-</script>
-@endif
 
 
 $('.form_eliminar').submit(function(e){
     e.preventDefault();
     Swal.fire({
   title: 'Estás seguro?',
-  text: "You won't be able to revert this!",
+  text: "No se puede reversar!",
   icon: 'warning',
   showCancelButton: true,
   confirmButtonColor: '#3085d6',
   cancelButtonColor: '#d33',
-  confirmButtonText: 'Yes, delete it!'
+  confirmButtonText: 'Sí, eliminar!'
 }).then((result) => {
   if (result.value) {
     

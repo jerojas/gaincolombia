@@ -28,12 +28,12 @@
               <div class="inner">
                 <h3>{{$total_inscritos}}</h3>
 
-                <p>Asistentes</p>
+                <p>Inscritos</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
               </div>
-              <a href="#" class="small-box-footer">Total Inscritos <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="/asistentes" class="small-box-footer">Total Inscritos <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -48,7 +48,7 @@
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
               </div>
-              <a href="#" class="small-box-footer">Check In <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="/checkin/{{$acceso->id}}" class="small-box-footer">Check In <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -98,7 +98,7 @@
                     <form action="/ingresos" method="POST">
                     @csrf
                         <div class="input-group">
-                            <input id="asistente_id" name="asistente_id" type="search" class="form-control form-control-lg" placeholder="Escanea el código o digite número de cédula" autofocus>
+                            <input id="asistente_id" name="asistente_id" type="search" class="form-control form-control-lg" placeholder="Escanea el código" autofocus>
                             <div class="input-group-append">
                             <input type="hidden" value="{{$acceso->id}}" id="acceso_id" name="acceso_id">
                                 <button type="submit" class="btn btn-lg btn-default">
@@ -111,7 +111,7 @@
             </div>
         </div>
 
-   <a href="/checkin/{{$acceso->id}}" class="btn btn-primary mb-3">LISTAR CHECK IN</a>
+   
   
    <div class="container text-center">
   <div class="row">

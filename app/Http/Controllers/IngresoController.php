@@ -173,6 +173,7 @@ class IngresoController extends Controller
                 $ingresos = new Ingreso();
                 $ingresos->asistente_id = $asistente_id;
                 $ingresos->acceso_id = $acceso_id;
+                $ingresos->user =\Auth::user()->name;
                 $ingresos->save();
 
                 $asistente_id = $request->get('asistente_id');
@@ -277,11 +278,7 @@ class IngresoController extends Controller
         ->where('asistente_id', '=', $ingreso)
         ->delete();
 
-        $acceso = DB::table('ingresos')
-        ->where('asistente_id', '=', $ingreso)
-        ->delete();
-
-       
+              
         return redirect()->back(); 
     }
 }

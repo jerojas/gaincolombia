@@ -105,7 +105,7 @@ class AccesoController extends Controller
     {
         $acceso = Acceso::find($id);
         $acceso->delete();
-        // return redirect('/accesos')->with('eliminar', 'ok');
+      
         return redirect()->back()->with('eliminar','ok');
     }
 }
