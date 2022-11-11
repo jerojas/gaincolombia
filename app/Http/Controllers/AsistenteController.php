@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Asistente;
 use Illuminate\Http\Request;
 use App\Http\Requests\CrearAsistentesRequest;
+use Illuminate\Support\Facades\DB;
+
 class AsistenteController extends Controller
 {
     /**
@@ -73,9 +75,12 @@ class AsistenteController extends Controller
      * @param  \App\Models\Asistente  $asistente
      * @return \Illuminate\Http\Response
      */
-    public function edit(Asistente $asistente)
+    public function edit($id)
     {
-        //
+        
+        $asistente = Asistente::find($id);
+
+        return view('asistente.edit')->with('asistente',$asistente);
     }
 
     /**
@@ -85,9 +90,27 @@ class AsistenteController extends Controller
      * @param  \App\Models\Asistente  $asistente
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Asistente $asistente)
+    public function update(Request $request, $id)
     {
-        //
+        $asistente = Asistente::find($id);
+
+        $asistente->asistente_id = $request->get('asistente_id');
+        $asistente->first_name = $request->get('first_name');
+        $asistente->last_name = $request->get('last_name');
+        $asistente->document = $request->get('document');
+        $asistente->profesion = $request->get('profesion');
+        $asistente->email = $request->get('email');
+        $asistente->phone = $request->get('phone');
+        $asistente->city = $request->get('city');
+        $asistente->state = $request->get('state');
+        $asistente->type_assist = $request->get('type_assist');
+
+        $asistente->save();
+        
+
+        $asistente->save();
+
+        return redirect('/asistentes');
     }
 
     /**

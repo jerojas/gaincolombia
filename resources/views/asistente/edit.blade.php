@@ -12,21 +12,70 @@
    @method('PUT')
   <div class="mb-3">
     <label for="" class="form-label">ID</label>
-    <input id="id" name="id" type="text" class="form-control" value="{{$acceso->id}}" disabled>    
+    <input id="id" name="id" type="text" class="form-control" value="{{$asistente->id}}" disabled>    
   </div>
   <div class="mb-3">
-    <label for="" class="form-label">Evento</label>
-    <input id="evento" name="evento" type="text" class="form-control" value="{{$acceso->evento}}">
+    <label for="" class="form-label">Asistente ID</label>
+    <input id="asistente_id" name="asistente_id" type="text" class="form-control" value="{{$asistente->asistente_id}}">
   </div>
   <div class="mb-3">
-    <label for="" class="form-label">Descripción</label>
-    <input id="description" name="description" type="text" class="form-control" value="{{$acceso->description}}">
+    <label for="" class="form-label">Nombres</label>
+    <input id="first_name" name="first_name" type="text" class="form-control" value="{{$asistente->first_name}}">
   </div>
   <div class="mb-3">
-    <label for="" class="form-label">Notas</label>
-    <input id="notes" name="notes" type="text" class="form-control" value="{{$acceso->notes}}">
+    <label for="" class="form-label">Apellidos</label>
+    <input id="last_name" name="last_name" type="text" class="form-control" value="{{$asistente->last_name}}">
   </div>
-    <a href="/accesos" class="btn btn-secondary">Cancelar</a>
+  <div class="mb-3">
+    <label for="" class="form-label">Documento</label>
+    <input id="document" name="document" type="number" class="form-control" value="{{$asistente->document}}">
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Profesion</label>
+    <input id="profesion" name="profesion" type="text" class="form-control" value="{{$asistente->profesion}}">
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Email</label>
+    <input id="email" name="email" type="email" class="form-control" value="{{$asistente->email}}">
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Telefono</label>
+    <input id="telefono" name="telefono" type="number" class="form-control" value="{{$asistente->phone}}">
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Ciudad</label>
+    <input id="ciudad" name="ciudad" type="text" class="form-control" value="{{$asistente->city}}">
+  </div>
+
+  <div class="mb-3">
+    <label for="" class="form-label">Departamento</label>
+    <input id="state" name="state" type="text" class="form-control" value="{{$asistente->state}}">
+  </div>
+
+  <div class="mb-3">
+    <label for="" class="form-label">Tipo Asistente</label>
+    
+    @if($asistente->type_assist == 'Asistente')
+  
+    <select class="form-control" name="type_assist" id="type_assist" class="form-control">
+   
+    <option value="Asistente" selected>Asistente</option>
+    <option value="Staff">Staff</option>
+    </select>
+   
+    @elseif($asistente->type_assist == 'Staff')
+   
+    <select class="form-control" name="type_assist" id="type_assist" class="form-control">
+   
+    <option value="Staff" selected>Staff</option>
+    <option value="Asistente">Asistente</option>
+    </select>
+   @else
+   @endif
+  </div>
+
+
+    <a href="/asistentes" class="btn btn-secondary">Cancelar</a>
   <button type="submit" class="btn btn-primary">Guardar</button>
 </form>
 @stop
