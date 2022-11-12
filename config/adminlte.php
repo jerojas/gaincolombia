@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'GAiN Colombia',
     'title_prefix' => '',
     'title_postfix' => '',
 
