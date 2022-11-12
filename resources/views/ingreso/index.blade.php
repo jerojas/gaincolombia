@@ -112,7 +112,9 @@
         </div>
 
    
-  
+        <br>
+        <br>
+
    <div class="container text-center">
   <div class="row">
   @isset($asistentes)
