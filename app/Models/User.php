@@ -62,9 +62,9 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-    public function profile_url()
+    public function adminlte_profile_url()
     {
-        return 'profile/username';
+        return 'user/profile';
     }
 
     public function adminlte_image()
