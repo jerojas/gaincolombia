@@ -46,5 +46,7 @@ Route::middleware([
 });
 
 
+
+
 require_once __DIR__ . '/jetstream.php';
 
