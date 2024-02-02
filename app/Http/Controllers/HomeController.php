@@ -31,8 +31,8 @@ class HomeController extends Controller
         $total_inscritos = DB::table('asistentes')
         ->count();
 
-        $total_ingresos = DB::table('ingresos')
-        ->where('id', '=', $acceso_first->id )
+       $total_ingresos = DB::table('ingresos')
+       ->where('id', '=', $acceso_first->id )
         ->count();
 
         $pendientes_ingresar =  $total_inscritos-$total_ingresos;

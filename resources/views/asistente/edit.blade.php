@@ -10,27 +10,27 @@
    <form action="/asistentes/{{$asistente->id}}" method="POST">    
    @csrf
    @method('PUT')
-  <div class="mb-3">
+  <!-- <div class="mb-3">
     <label for="" class="form-label">ID</label>
     <input id="id" name="id" type="text" class="form-control" value="{{$asistente->id}}" disabled>    
-  </div>
+  </div> -->
   <div class="mb-3">
     <label for="" class="form-label">Asistente ID</label>
     <input id="asistente_id" name="asistente_id" type="text" class="form-control" value="{{$asistente->asistente_id}}">
   </div>
   <div class="mb-3">
-    <label for="" class="form-label">Nombres</label>
+    <label for="" class="form-label">Nombres Completos</label>
     <input id="first_name" name="first_name" type="text" class="form-control" value="{{$asistente->first_name}}">
   </div>
   <div class="mb-3">
-    <label for="" class="form-label">Apellidos</label>
+    <label for="" class="form-label">Distrito</label>
     <input id="last_name" name="last_name" type="text" class="form-control" value="{{$asistente->last_name}}">
   </div>
   <div class="mb-3">
-    <label for="" class="form-label">Documento</label>
-    <input id="document" name="document" type="number" class="form-control" value="{{$asistente->document}}">
+    <label for="" class="form-label">Iglesia</label>
+    <input id="document" name="document" type="text" class="form-control" value="{{$asistente->document}}">
   </div>
-  <div class="mb-3">
+  <!-- <div class="mb-3">
     <label for="" class="form-label">Profesion</label>
     <input id="profesion" name="profesion" type="text" class="form-control" value="{{$asistente->profesion}}">
   </div>
@@ -50,7 +50,7 @@
   <div class="mb-3">
     <label for="" class="form-label">Departamento</label>
     <input id="state" name="state" type="text" class="form-control" value="{{$asistente->state}}">
-  </div>
+  </div> -->
 
   <div class="mb-3">
     <label for="" class="form-label">Tipo Asistente</label>
@@ -80,7 +80,7 @@
 </form>
 @stop
 
-@section('css')s
+@section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 

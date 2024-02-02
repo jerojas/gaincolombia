@@ -19,14 +19,14 @@
 <table id="accesos" class="table table-striped table-bordered shadow-lg mt-4" style="width:100%">
     <thead class="bg-primary text-white">
         <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Nombres</th>
-            <th scope="col">Apellidos</th>
-            <th scope="col">Documento</th>
-            <th scope="col">Profesión</th>
+            <th scope="col">Codigo</th>
+            <th scope="col">Nombre Completo</th>
+            <th scope="col">Distrito</th>
+            <th scope="col">Iglesia</th>
+            <!-- <th scope="col">Profesión</th>
             <th scope="col">Email</th>
             <th scope="col">Teléfono</th>
-            <th scope="col">Ciudad</th>
+            <th scope="col">Ciudad</th> -->
             <th scope="col">T. Asist</th>
             <th scope="col">Acciones</th>
         </tr>
@@ -38,10 +38,10 @@
             <td>{{$asistente->first_name}}</td>
             <td>{{$asistente->last_name}}</td>
             <td>{{$asistente->document}}</td>
-            <td>{{$asistente->profesion}}</td>
+            <!-- <td>{{$asistente->profesion}}</td>
             <td>{{$asistente->email}}</td>
             <td>{{$asistente->phone}}</td>
-            <td>{{$asistente->city}}</td>
+            <td>{{$asistente->city}}</td> -->
             <td>{{$asistente->type_assist}}</td>
            
             <td>
@@ -92,7 +92,7 @@ Swal.fire(
 <script>
 $(document).ready(function() {
     $('#accesos').DataTable({
-        "lengthMenu": [[5,10, 50, -1], [5, 10, 50, "All"]],
+        "lengthMenu": [[6,10, 50, -1], [6, 10, 50, "All"]],
         language: {
   'url' : '//cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json'
 },
@@ -101,9 +101,7 @@ dom: 'Bfrtip',
         buttons: [
             'excel', 'pdf'
         ]
-
-        
-        
+    
     });
 } );
 

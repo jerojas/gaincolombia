@@ -18,39 +18,63 @@
 <form action="{{url('asistentes')}}" method="POST">
   @csrf
   <div class="mb-3 col-6">
-    <label for="" class="form-label">ID</label>
+    <label for="" class="form-label">Código</label>
     
     <input type="text" class="form-control" name="asistente_id" id="asistente_id" value="{{ old('asistente_id') }}" tabindex="1" required>
 
   </div>
   <div class="mb-3 col-6">
-    <label for="" class="form-label">Nombres</label>
+    <label for="" class="form-label">Nombre Completo</label>
     
     <input type="text" class="form-control" name="first_name" id="first_name" value="{{ old('first_name') }}" tabindex="2" required>
   
   </div>
-  <div class="mb-3 col-6">
-    <label for="" class="form-label">Apellidos</label>
+  <!-- <div class="mb-3 col-6">
+    <label for="" class="form-label">Distrito</label>
     
     <input type="text" class="form-control" name="last_name" id="last_name" value="{{ old('last_name') }}" tabindex="3" required>
     
-  </div>
+  </div> -->
+
   <div class="mb-3 col-6">
-    <label for="" class="form-label">Documento</label>
+    <label for="" class="form-label">Distrito</label>
+
+    <select class="form-control" name="last_name" id="last_name" class="form-control"  tabindex="10">
+    <option value="LUNA PARK">LUNA PARK</option>
+    <option value="EMMANUEL">EMMANUEL</option>
+    <option value="BELLO HORIZONTE">BELLO HORIZONTE</option>
+    <option value="BETANIA">BETANIA</option>
+    <option value="SANTUARIO SUR">SANTUARIO SUR</option>
+    <option value="MOLINOS">MOLINOS</option>
+    <option value="ISRAEL">ISRAEL</option>
+    <option value="LUCERO">LUCERO</option>
+    <option value="SOACHA C.">SOACHA C.</option>
+    <option value="BOSA ">BOSA</option>
+    <option value="SOACHA T.">REDENCION</option>
+    <option value="JUDA">JUDA</option>
     
-    <input type="number" class="form-control" name="document" id="document" value="{{ old('document') }}" tabindex="4" required>
+
+    </select>
    
   </div>
+
+
   <div class="mb-3 col-6">
+    <label for="" class="form-label">Iglesia</label>
+    
+    <input type="text" class="form-control" name="document" id="document" value="{{ old('document') }}" tabindex="4" required>
+   
+  </div>
+  <!-- <div class="mb-3 col-6">
     <label for="" class="form-label">Profesión</label>
     <input id="profesion" name="profesion" type="text" class="form-control" tabindex="5" value="{{ old('profesion') }}">
-  </div>
-  <div class="mb-3 col-6">
+  </div> -->
+  <!-- <div class="mb-3 col-6">
     <label for="" class="form-label">Email</label>
     <input type="email" class="form-control" name="email" id="email" value="{{ old('email') }}" tabindex="6" required>
     
-  </div>
-  <div class="mb-3 col-6">
+  </div> -->
+  <!-- <div class="mb-3 col-6">
     <label for="" class="form-label">Teléfono</label>
     <input type="number" class="form-control" name="phone" id="phone" value="{{ old('phone') }}" tabindex="7" required>
    
@@ -62,7 +86,7 @@
   <div class="mb-3 col-6">
     <label for="" class="form-label">Departamento</label>
     <input id="state" name="state" type="text" class="form-control" tabindex="9" value="{{ old('state') }}">
-  </div>
+  </div> -->
   
   <div class="mb-3 col-6">
     <label for="" class="form-label">Tipo Asistente</label>

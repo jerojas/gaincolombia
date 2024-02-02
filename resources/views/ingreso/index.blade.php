@@ -3,7 +3,7 @@
 @section('title', 'Ingresos')
 
 @section('content_header')
-   
+
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
@@ -83,6 +83,8 @@
             </div>
           </div>
           <!-- ./col -->
+
+          <h3>Molinos: {{$molinos}}</h3>
         </div>
 
 @stop
@@ -124,15 +126,15 @@
       <h3>{{$asistente->asistente_id}}</h3>
     </div>
     <div class="col">
-    <label for="">NOMBRES</label>
+    <label for="">NOMBRE COMPLETO</label>
       <h3>{{$asistente->first_name}}</h3>
     </div>
     <div class="col">
-    <label for="">APELLIDOS</label>
+    <label for="">DISTRITO</label>
       <h3>{{$asistente->last_name}}</h3>
     </div>
     <div class="col">
-    <label for="">DOCUMENTO</label>
+    <label for="">IGLESIA</label>
       <h3>{{$asistente->document}}</h3>
     </div>
     <div class="col">
@@ -226,5 +228,7 @@ $(document).ready(function() {
     });
 } );
 </script>
+
+
 
 @stop

@@ -31,9 +31,9 @@
     <thead class="bg-primary text-white">
         <tr>
             <th scope="col">ID Asistente</th>
-            <th scope="col">Nombres</th>
-            <th scope="col">Apellidos</th>
-            <th scope="col">Documento</th>
+            <th scope="col">Nombre Completo</th>
+            <th scope="col">Distrito</th>
+            <th scope="col">Iglesia</th>
             <th scope="col">Tipo de Asistente</th>
             <th scope="col">Hora de Ingreso</th>
                       

@@ -25,7 +25,7 @@ class IngresoController extends Controller
         $acceso_id = $id;
         $acceso = Acceso::find($id);
 
-        
+         
             $total_inscritos = DB::table('asistentes as a')
             ->count();
 
@@ -42,6 +42,11 @@ class IngresoController extends Controller
             
             ->count();
 
+            $molinos = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'MOLINOS')
+            ->where('i.acceso_id', '=', $acceso_id)
+            ->count();
                       
           
 
@@ -49,9 +54,8 @@ class IngresoController extends Controller
                                  ->with('total_inscritos',$total_inscritos)
                                  ->with('total_ingresos',$total_ingresos)
                                  ->with('pendientes_ingresar',$pendientes_ingresar)
-                                 ->with('staff',$staff);
-
-                             
+                                 ->with('staff',$staff)
+                                 ->with('molinos',$molinos);            
         
     }
 
@@ -132,6 +136,11 @@ class IngresoController extends Controller
             ->Where('i.asistente_id', $asistente_id)
             ->count();
 
+            $molinos = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'MOLINOS')
+            ->where('i.acceso_id', '=', $acceso_id)
+            ->count();
         
         $validar_asistente = DB::table('asistentes')
         ->where('asistente_id', '=', $asistente_id) 
@@ -166,7 +175,8 @@ class IngresoController extends Controller
                                  ->with('pendientes_ingresar',$pendientes_ingresar)
                                     ->with('usado','CÓDIGO USADO')
                                    ->with('validar_ingreso','ok')
-                                   ->with('staff',$staff);
+                                   ->with('staff',$staff)
+                                   ->with('molinos',$molinos);
 
 
             }else{
@@ -203,6 +213,12 @@ class IngresoController extends Controller
             ->Where('i.asistente_id', $asistente_id)
             ->count();
     
+            $molinos = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'MOLINOS')
+            ->where('i.acceso_id', '=', $acceso_id)
+            ->count();
+            
 
                 return view('ingreso.index')->with('asistentes',$asistentes)
                                 ->with('acceso',$acceso)
@@ -210,7 +226,8 @@ class IngresoController extends Controller
                                  ->with('total_ingresos',$total_ingresos)
                                  ->with('pendientes_ingresar',$pendientes_ingresar)
                                  ->with('asistent','INGRESO VALIDADO')
-                                 ->with('staff',$staff);     
+                                 ->with('staff',$staff)
+                                 ->with('molinos',$molinos);     
               
                   
                 }        
@@ -223,7 +240,8 @@ class IngresoController extends Controller
                                  ->with('total_ingresos',$total_ingresos)
                                  ->with('pendientes_ingresar',$pendientes_ingresar)
                                  ->with('validar_asistente','ok')
-                                 ->with('staff',$staff);       
+                                 ->with('staff',$staff)
+                                 ->with('molinos',$molinos);       
               
              }
         
