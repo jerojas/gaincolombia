@@ -84,8 +84,7 @@
           </div>
           <!-- ./col -->
 
-          <h3>Molinos: {{$molinos}}</h3>
-        </div>
+          </div>
 
 @stop
 
