@@ -316,4 +316,17 @@ class IngresoController extends Controller
               
         return redirect()->back(); 
     }
+
+    public function eliminarCheckin($id)
+    {
+        $asistente = Asistente::find($id);
+        $asistente->state = 0;
+        $asistente->save();
+         $ingreso = DB::table('ingresos')
+        ->where('asistente_id', '=', $id)
+        ->delete();
+
+              
+        return redirect()->back(); 
+    }
 }

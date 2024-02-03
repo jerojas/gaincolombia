@@ -52,10 +52,11 @@
             <td>
                 <form action="{{ route ('asistentes.destroy',$asistente->id)}}" class="form_eliminar" method="POST">
                 <a href="/checkinasistente/{{ $asistente->id}}" class="btn btn-info">Check In</a>
-                <a href="/asistentes/{{ $asistente->id}}/edit" class="btn btn-info">Editar</a>
+                <a href="/eliminarcheckin/{{ $asistente->id}}" class="btn btn-danger">Elim. Check In</a>
+                <a href="/asistentes/{{ $asistente->id}}/edit" class="btn btn-info">Edit</a>
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="btn btn-danger">Borrar</button>
+                <button type="submit" class="btn btn-danger">Del</button>
                 </form>
             </td>
         </tr>

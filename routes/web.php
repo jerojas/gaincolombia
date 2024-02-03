@@ -27,6 +27,7 @@ Route::get('/controlacceso/{id}', 'App\Http\Controllers\IngresoController@index'
 Route::get('/ingresos/{id}', 'App\Http\Controllers\IngresoController@store');
 Route::get('/checkin/{id}', 'App\Http\Controllers\IngresoController@checkin');
 Route::get('/checkinasistente/{id}', 'App\Http\Controllers\IngresoController@CheckinAsistente');
+Route::get('/eliminarcheckin/{id}', 'App\Http\Controllers\IngresoController@eliminarCheckin');
 
 Route::post('dash', 'App\Http\Controllers\HomeController@dash');
 
