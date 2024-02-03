@@ -39,43 +39,43 @@
               <div class="inner">
                 <h3>{{$total_inscritos}}</h3>
 
-                <p>Inscritos</p>
+                <p>INSCRITOS</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
               </div>
-              <a href="#" class="small-box-footer">Total Inscritos <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="#" class="small-box-footer">TOTAL INSCRITOS <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-2 col-6">
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
                 <h3>{{$total_ingresos}}<sup style="font-size: 20px"></sup></h3>
 
-                <p>Ingresos</p>
+                <p>INGRESOS</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
               </div>
-              <a href="#" class="small-box-footer">Check In <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="#" class="small-box-footer">CHECK IN<i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-2 col-6">
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
 
                 <h3>{{$pendientes_ingresar}}</h3>
 
-                <p>Pendientes por Ingresar</p>
+                <p>PENDIENTES</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
               </div>
-              <a href="#" class="small-box-footer">Pendientes por Check In <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="#" class="small-box-footer">POR INGRESAR<i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -85,15 +85,212 @@
               <div class="inner">
                 <h3>{{$staff}}</h3>
 
-                <p>Staff</p>
+                <p>STAFF</p>
               </div>
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>
               </div>
-              <a href="#" class="small-box-footer">Logistica <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="#" class="small-box-footer">LOGISTICA <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
+
+          
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger text-center">
+              <div class="inner">
+                <h3>{{$molinos}}</h3>
+
+                <p>MOLINOS</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+              </div>
+              <a href="#" class="small-box-footer">DISTRITO <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
+         
+          <div class="col-lg-2 col-6">       
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3>{{$lunapark}}</h3>
+                <p>LUNA PARK</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+              </div>
+              <a href="#" class="small-box-footer">DISTRITO <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
+
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3>{{$emmanuel}}<sup style="font-size: 20px"></sup></h3>
+
+                <p>EMMANUEL</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+              </div>
+              <a href="#" class="small-box-footer">DISTRITO<i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box bg-warning">
+              <div class="inner">
+
+                <h3>{{$bellohorizonte}}</h3>
+
+                <p>BELLO HORIZONTE</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-person-add"></i>
+              </div>
+              <a href="#" class="small-box-footer">DISTRITO <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
+
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger text-center">
+              <div class="inner">
+                <h3>{{$betania}}</h3>
+
+                <p>BETANIA</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+              </div>
+              <a href="#" class="small-box-footer">DISTRITO <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6">       
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3>{{$santuariosur}}</h3>
+                <p>SANTUARIO SUR</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+              </div>
+              <a href="#" class="small-box-footer">DISTRITO <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
+
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger text-center">
+              <div class="inner">
+                <h3>{{$israel}}</h3>
+
+                <p>ISRAEL</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+              </div>
+              <a href="#" class="small-box-footer">DISTRITO <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
+         
+          <div class="col-lg-2 col-6">       
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3>{{$lucero}}</h3>
+                <p>LUCERO</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+              </div>
+              <a href="#" class="small-box-footer">DISTRITO <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
+
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3>{{$soachac}}<sup style="font-size: 20px"></sup></h3>
+
+                <p>SOACHA C.</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+              </div>
+              <a href="#" class="small-box-footer">DISTRITO<i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box bg-warning">
+              <div class="inner">
+
+                <h3>{{$bosa}}</h3>
+
+                <p>BOSA</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-person-add"></i>
+              </div>
+              <a href="#" class="small-box-footer">DISTRITO <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
+
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger text-center">
+              <div class="inner">
+                <h3>{{$soachat}}</h3>
+
+                <p>SOACHA T.</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+              </div>
+              <a href="#" class="small-box-footer">DISTRITO <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6">       
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3>{{$juda}}</h3>
+                <p>JUDÁ</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+              </div>
+              <a href="#" class="small-box-footer">DISTRITO <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6">       
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3>{{$juda}}</h3>
+                <p>JUDÁ</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+              </div>
+              <a href="#" class="small-box-footer">DISTRITO <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
+
         </div>  
         @endisset
 

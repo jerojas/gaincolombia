@@ -42,6 +42,87 @@ class HomeController extends Controller
             ->where('a.type_assist', '=', 'staff')
             ->where('i.acceso_id', '=', $acceso_first->id )
             ->count();
+//Total por distritos
+
+            $molinos = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'MOLINOS')
+            ->where('i.acceso_id', '=', $acceso_first->id )
+            ->count();
+
+            $lunapark = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'LUNA PARK')
+            ->where('i.acceso_id', '=', $acceso_first->id )
+            ->count();
+
+            $redencion = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'REDENCION')
+            ->where('i.acceso_id', '=', $acceso_first->id )
+            ->count();
+
+            $emmanuel = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'EMMANUEL')
+            ->where('i.acceso_id', '=', $acceso_first->id )
+            ->count();
+
+            $bellohorizonte = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'BELLO HORIZONTE')
+            ->where('i.acceso_id', '=', $acceso_first->id )
+            ->count();
+
+            $betania = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'BETANIA')
+            ->where('i.acceso_id', '=', $acceso_first->id )
+            ->count();
+
+            $santuariosur = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'SANTUARIO SUR')
+            ->where('i.acceso_id', '=', $acceso_first->id )
+            ->count();
+
+            $israel = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'ISRAEL')
+            ->where('i.acceso_id', '=', $acceso_first->id )
+            ->count();
+
+            $lucero = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'LUCERO')
+            ->where('i.acceso_id', '=', $acceso_first->id )
+            ->count();
+
+            $soachac = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'SOACHA C.')
+            ->where('i.acceso_id', '=', $acceso_first->id )
+            ->count();
+
+            $bosa = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'BOSA')
+            ->where('i.acceso_id', '=', $acceso_first->id )
+            ->count();
+
+            $soachat = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'SOACHA T.')
+            ->where('i.acceso_id', '=', $acceso_first->id )
+            ->count();
+
+            $juda = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'JUDA')
+            ->where('i.acceso_id', '=', $acceso_first->id )
+            ->count();
+
+
 
         $nombre_acceso = DB::table('accesos')
         ->select('description')
@@ -62,7 +143,20 @@ class HomeController extends Controller
                                         ->with('pendientes_ingresar',$pendientes_ingresar)
                                         ->with('staff',$staff)
                                         ->with('nombre_acceso',$nombre_acceso)
-                                        ->with('asistentes',$asistentes);
+                                        ->with('asistentes',$asistentes)
+                                        ->with('molinos',$molinos)
+                                        ->with('lunapark',$lunapark)
+                                        ->with('redencion',$redencion)
+                                        ->with('emmanuel',$emmanuel)
+                                        ->with('bellohorizonte',$bellohorizonte)
+                                        ->with('betania',$betania)
+                                        ->with('santuariosur',$santuariosur)
+                                        ->with('israel',$israel)
+                                        ->with('lucero',$lucero)
+                                        ->with('soachac',$soachac)
+                                        ->with('bosa',$bosa)
+                                        ->with('soachat',$soachat)
+                                        ->with('juda',$juda);
         }
 
 
@@ -92,6 +186,87 @@ class HomeController extends Controller
             ->where('i.acceso_id', '=', $acceso_id)
             ->count();
 
+            $molinos = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'MOLINOS')
+            ->where('i.acceso_id', '=', $acceso_id )
+            ->count();
+
+            $lunapark = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'LUNA PARK')
+            ->where('i.acceso_id', '=',  $acceso_id )
+            ->count();
+
+            $redencion = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'REDENCION')
+            ->where('i.acceso_id', '=',  $acceso_id )
+            ->count();
+
+            $emmanuel = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'EMMANUEL')
+            ->where('i.acceso_id', '=',  $acceso_id )
+            ->count();
+
+            $bellohorizonte = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'BELLO HORIZONTE')
+            ->where('i.acceso_id', '=',  $acceso_id )
+            ->count();
+
+            $betania = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'BETANIA')
+            ->where('i.acceso_id', '=',  $acceso_id )
+            ->count();
+
+            $santuariosur = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'SANTUARIO SUR')
+            ->where('i.acceso_id', '=',  $acceso_id )
+            ->count();
+
+            $israel = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'ISRAEL')
+            ->where('i.acceso_id', '=',  $acceso_id )
+            ->count();
+
+            $lucero = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'LUCERO')
+            ->where('i.acceso_id', '=',  $acceso_id )
+            ->count();
+
+            $soachac = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'SOACHA C.')
+            ->where('i.acceso_id', '=', $acceso_id )
+            ->count();
+
+            $bosa = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'BOSA')
+            ->where('i.acceso_id', '=',  $acceso_id )
+            ->count();
+
+            $soachat = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'SOACHA T.')
+            ->where('i.acceso_id', '=',  $acceso_id )
+            ->count();
+
+            $juda = DB::table('asistentes as a')
+            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
+            ->where('a.last_name', '=', 'JUDA')
+            ->where('i.acceso_id', '=',  $acceso_id )
+            ->count();
+
+
+
+
             $asistentes = DB::table('asistentes as a')
             ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
             ->select('a.asistente_id', 'a.first_name', 'a.last_name','a.document','a.type_assist','i.created_at', 'i.user')
@@ -106,7 +281,20 @@ class HomeController extends Controller
                                             ->with('staff',$staff)
                                             ->with('accesos',$accesos)
                                             ->with('nombre_acceso',$nombre_acceso)
-                                            ->with('asistentes',$asistentes);
+                                            ->with('asistentes',$asistentes)
+                                            ->with('molinos',$molinos)
+                                        ->with('lunapark',$lunapark)
+                                        ->with('redencion',$redencion)
+                                        ->with('emmanuel',$emmanuel)
+                                        ->with('bellohorizonte',$bellohorizonte)
+                                        ->with('betania',$betania)
+                                        ->with('santuariosur',$santuariosur)
+                                        ->with('israel',$israel)
+                                        ->with('lucero',$lucero)
+                                        ->with('soachac',$soachac)
+                                        ->with('bosa',$bosa)
+                                        ->with('soachat',$soachat)
+                                        ->with('juda',$juda);
 
     }
     /**
