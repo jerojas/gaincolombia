@@ -233,7 +233,7 @@ class IngresoController extends Controller
     public function CheckinAsistente(Request $request, $id)
     {
         $asistente = Asistente::find($id);
-        $acceso_id = 3;
+        $acceso_id = 1;
         
         $validar_ingreso = DB::table('ingresos')
         ->where('asistente_id', '=', $id)
