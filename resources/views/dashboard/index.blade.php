@@ -280,8 +280,8 @@
           <div class="col-lg-2 col-6">       
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>{{$juda}}</h3>
-                <p>JUDÁ</p>
+                <h3>{{$redencion}}</h3>
+                <p>REDENCIÓN</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
