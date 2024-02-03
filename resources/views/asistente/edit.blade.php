@@ -22,10 +22,252 @@
     <label for="" class="form-label">Nombres Completos</label>
     <input id="first_name" name="first_name" type="text" class="form-control" value="{{$asistente->first_name}}">
   </div>
+ 
   <div class="mb-3">
     <label for="" class="form-label">Distrito</label>
-    <input id="last_name" name="last_name" type="text" class="form-control" value="{{$asistente->last_name}}">
+    
+    @if($asistente->last_name == 'LUNA PARK')
+  
+    <select class="form-control" name="last_name" id="last_name" class="form-control">
+    <option value="LUNA PARK" selected>LUNA PARK</option>
+    <option value="REDENCION">REDENCION</option>
+    <option value="EMMANUEL">EMMANUEL</option>
+    <option value="BELLO HORIZONTE">BELLO HORIZONTE</option>
+    <option value="BETANIA">BETANIA</option>
+    <option value="SANTUARIO SUR">SANTUARIO SUR</option>
+    <option value="MOLINOS">MOLINOS</option>
+    <option value="ISRAEL">ISRAEL</option>
+    <option value="LUCERO">LUCERO</option>
+    <option value="SOACHA C.">SOACHA C.</option>
+    <option value="BOSA">BOSA</option>
+    <option value="SOACHA T.">SOACHA T.</option>
+    <option value="JUDA">JUDA</option>
+    </select>
+   
+    @elseif($asistente->last_name == 'REDENCION')
+   
+    <select class="form-control" name="last_name" id="last_name" class="form-control">
+    <option value="LUNA PARK">LUNA PARK</option>
+    <option value="REDENCION" selected>REDENCION</option>
+    <option value="EMMANUEL">EMMANUEL</option>
+    <option value="BELLO HORIZONTE">BELLO HORIZONTE</option>
+    <option value="BETANIA">BETANIA</option>
+    <option value="SANTUARIO SUR">SANTUARIO SUR</option>
+    <option value="MOLINOS">MOLINOS</option>
+    <option value="ISRAEL">ISRAEL</option>
+    <option value="LUCERO">LUCERO</option>
+    <option value="SOACHA C.">SOACHA C.</option>
+    <option value="BOSA">BOSA</option>
+    <option value="SOACHA T.">SOACHA T.</option>
+    <option value="JUDA">JUDA</option>
+    </select>
+
+    @elseif($asistente->last_name == 'EMMANUEL')
+   
+    <select class="form-control" name="last_name" id="last_name" class="form-control">
+    <option value="LUNA PARK">LUNA PARK</option>
+    <option value="REDENCION">REDENCION</option>
+    <option value="EMMANUEL" selected>EMMANUEL</option>
+    <option value="BELLO HORIZONTE">BELLO HORIZONTE</option>
+    <option value="BETANIA">BETANIA</option>
+    <option value="SANTUARIO SUR">SANTUARIO SUR</option>
+    <option value="MOLINOS">MOLINOS</option>
+    <option value="ISRAEL">ISRAEL</option>
+    <option value="LUCERO">LUCERO</option>
+    <option value="SOACHA C.">SOACHA C.</option>
+    <option value="BOSA">BOSA</option>
+    <option value="SOACHA T.">SOACHA T.</option>
+    <option value="JUDA">JUDA</option>
+    </select>
+
+    @elseif($asistente->last_name == 'BELLO HORIZONTE')
+   
+   <select class="form-control" name="last_name" id="last_name" class="form-control">
+   <option value="LUNA PARK">LUNA PARK</option>
+   <option value="REDENCION">REDENCION</option>
+   <option value="EMMANUEL">EMMANUEL</option>
+   <option value="BELLO HORIZONTE" selected>BELLO HORIZONTE</option>
+   <option value="BETANIA">BETANIA</option>
+   <option value="SANTUARIO SUR">SANTUARIO SUR</option>
+   <option value="MOLINOS">MOLINOS</option>
+   <option value="ISRAEL">ISRAEL</option>
+   <option value="LUCERO">LUCERO</option>
+   <option value="SOACHA C.">SOACHA C.</option>
+   <option value="BOSA">BOSA</option>
+   <option value="SOACHA T.">SOACHA T.</option>
+   <option value="JUDA">JUDA</option>
+   </select>
+
+   @elseif($asistente->last_name == 'BETANIA')
+   
+   <select class="form-control" name="last_name" id="last_name" class="form-control">
+   <option value="LUNA PARK">LUNA PARK</option>
+   <option value="REDENCION">REDENCION</option>
+   <option value="EMMANUEL">EMMANUEL</option>
+   <option value="BELLO HORIZONTE">BELLO HORIZONTE</option>
+   <option value="BETANIA" selected>BETANIA</option>
+   <option value="SANTUARIO SUR">SANTUARIO SUR</option>
+   <option value="MOLINOS">MOLINOS</option>
+   <option value="ISRAEL">ISRAEL</option>
+   <option value="LUCERO">LUCERO</option>
+   <option value="SOACHA C.">SOACHA C.</option>
+   <option value="BOSA">BOSA</option>
+   <option value="SOACHA T.">SOACHA T.</option>
+   <option value="JUDA">JUDA</option>
+   </select>
+
+   @elseif($asistente->last_name == 'SANTUARIO SUR')
+   
+   <select class="form-control" name="last_name" id="last_name" class="form-control">
+   <option value="LUNA PARK">LUNA PARK</option>
+   <option value="REDENCION">REDENCION</option>
+   <option value="EMMANUEL">EMMANUEL</option>
+   <option value="BELLO HORIZONTE">BELLO HORIZONTE</option>
+   <option value="BETANIA">BETANIA</option>
+   <option value="SANTUARIO SUR" selected>SANTUARIO SUR</option>
+   <option value="MOLINOS">MOLINOS</option>
+   <option value="ISRAEL">ISRAEL</option>
+   <option value="LUCERO">LUCERO</option>
+   <option value="SOACHA C.">SOACHA C.</option>
+   <option value="BOSA">BOSA</option>
+   <option value="SOACHA T.">SOACHA T.</option>
+   <option value="JUDA">JUDA</option>
+   </select>
+
+   @elseif($asistente->last_name == 'MOLINOS')
+   
+   <select class="form-control" name="last_name" id="last_name" class="form-control">
+   <option value="LUNA PARK">LUNA PARK</option>
+   <option value="REDENCION">REDENCION</option>
+   <option value="EMMANUEL">EMMANUEL</option>
+   <option value="BELLO HORIZONTE">BELLO HORIZONTE</option>
+   <option value="BETANIA">BETANIA</option>
+   <option value="SANTUARIO SUR">SANTUARIO SUR</option>
+   <option value="MOLINOS" selected>MOLINOS</option>
+   <option value="ISRAEL">ISRAEL</option>
+   <option value="LUCERO">LUCERO</option>
+   <option value="SOACHA C.">SOACHA C.</option>
+   <option value="BOSA">BOSA</option>
+   <option value="SOACHA T.">SOACHA T.</option>
+   <option value="JUDA">JUDA</option>
+   </select>
+
+   @elseif($asistente->last_name == 'ISRAEL')
+   
+   <select class="form-control" name="last_name" id="last_name" class="form-control">
+   <option value="LUNA PARK">LUNA PARK</option>
+   <option value="REDENCION">REDENCION</option>
+   <option value="EMMANUEL">EMMANUEL</option>
+   <option value="BELLO HORIZONTE">BELLO HORIZONTE</option>
+   <option value="BETANIA">BETANIA</option>
+   <option value="SANTUARIO SUR">SANTUARIO SUR</option>
+   <option value="MOLINOS">MOLINOS</option>
+   <option value="ISRAEL" selected>ISRAEL</option>
+   <option value="LUCERO">LUCERO</option>
+   <option value="SOACHA C.">SOACHA C.</option>
+   <option value="BOSA">BOSA</option>
+   <option value="SOACHA T.">SOACHA T.</option>
+   <option value="JUDA">JUDA</option>
+   </select>
+
+   @elseif($asistente->last_name == 'LUCERO')
+   
+   <select class="form-control" name="last_name" id="last_name" class="form-control">
+   <option value="LUNA PARK">LUNA PARK</option>
+   <option value="REDENCION">REDENCION</option>
+   <option value="EMMANUEL">EMMANUEL</option>
+   <option value="BELLO HORIZONTE">BELLO HORIZONTE</option>
+   <option value="BETANIA">BETANIA</option>
+   <option value="SANTUARIO SUR">SANTUARIO SUR</option>
+   <option value="MOLINOS">MOLINOS</option>
+   <option value="ISRAEL">ISRAEL</option>
+   <option value="LUCERO" selected>LUCERO</option>
+   <option value="SOACHA C.">SOACHA C.</option>
+   <option value="BOSA">BOSA</option>
+   <option value="SOACHA T.">SOACHA T.</option>
+   <option value="JUDA">JUDA</option>
+   </select>
+
+   @elseif($asistente->last_name == 'SOACHA C.')
+   
+   <select class="form-control" name="last_name" id="last_name" class="form-control">
+   <option value="LUNA PARK">LUNA PARK</option>
+   <option value="REDENCION">REDENCION</option>
+   <option value="EMMANUEL">EMMANUEL</option>
+   <option value="BELLO HORIZONTE">BELLO HORIZONTE</option>
+   <option value="BETANIA">BETANIA</option>
+   <option value="SANTUARIO SUR">SANTUARIO SUR</option>
+   <option value="MOLINOS">MOLINOS</option>
+   <option value="ISRAEL">ISRAEL</option>
+   <option value="LUCERO">LUCERO</option>
+   <option value="SOACHA C." selected>SOACHA C.</option>
+   <option value="BOSA">BOSA</option>
+   <option value="SOACHA T.">SOACHA T.</option>
+   <option value="JUDA">JUDA</option>
+   </select>
+
+   @elseif($asistente->last_name == 'BOSA')
+   
+   <select class="form-control" name="last_name" id="last_name" class="form-control">
+   <option value="LUNA PARK">LUNA PARK</option>
+   <option value="REDENCION">REDENCION</option>
+   <option value="EMMANUEL">EMMANUEL</option>
+   <option value="BELLO HORIZONTE">BELLO HORIZONTE</option>
+   <option value="BETANIA">BETANIA</option>
+   <option value="SANTUARIO SUR">SANTUARIO SUR</option>
+   <option value="MOLINOS">MOLINOS</option>
+   <option value="ISRAEL">ISRAEL</option>
+   <option value="LUCERO">LUCERO</option>
+   <option value="SOACHA C.">SOACHA C.</option>
+   <option value="BOSA" selected>BOSA</option>
+   <option value="SOACHA T.">SOACHA T.</option>
+   <option value="JUDA">JUDA</option>
+   </select>
+
+   @elseif($asistente->last_name == 'SOACHA T.')
+   
+   <select class="form-control" name="last_name" id="last_name" class="form-control">
+   <option value="LUNA PARK">LUNA PARK</option>
+   <option value="REDENCION">REDENCION</option>
+   <option value="EMMANUEL">EMMANUEL</option>
+   <option value="BELLO HORIZONTE">BELLO HORIZONTE</option>
+   <option value="BETANIA">BETANIA</option>
+   <option value="SANTUARIO SUR">SANTUARIO SUR</option>
+   <option value="MOLINOS">MOLINOS</option>
+   <option value="ISRAEL">ISRAEL</option>
+   <option value="LUCERO">LUCERO</option>
+   <option value="SOACHA C.">SOACHA C.</option>
+   <option value="BOSA">BOSA</option>
+   <option value="SOACHA T." selected>SOACHA T.</option>
+   <option value="JUDA">JUDA</option>
+   </select>
+
+   @elseif($asistente->last_name == 'JUDA')
+   
+   <select class="form-control" name="last_name" id="last_name" class="form-control">
+   <option value="LUNA PARK">LUNA PARK</option>
+   <option value="REDENCION">REDENCION</option>
+   <option value="EMMANUEL">EMMANUEL</option>
+   <option value="BELLO HORIZONTE">BELLO HORIZONTE</option>
+   <option value="BETANIA">BETANIA</option>
+   <option value="SANTUARIO SUR">SANTUARIO SUR</option>
+   <option value="MOLINOS">MOLINOS</option>
+   <option value="ISRAEL">ISRAEL</option>
+   <option value="LUCERO">LUCERO</option>
+   <option value="SOACHA C.">SOACHA C.</option>
+   <option value="BOSA">BOSA</option>
+   <option value="SOACHA T.">SOACHA T.</option>
+   <option value="JUDA" selected>JUDA</option>
+   </select>
+
+   @else
+   @endif
   </div>
+
+
+
+
+
   <div class="mb-3">
     <label for="" class="form-label">Iglesia</label>
     <input id="document" name="document" type="text" class="form-control" value="{{$asistente->document}}">
