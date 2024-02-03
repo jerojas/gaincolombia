@@ -18,6 +18,8 @@ class AsistenteController extends Controller
     public function index()
     {
       $asistentes= Asistente::all();
+      
+      
 
        return view('asistente.index')->with('asistentes',$asistentes);
     }
@@ -127,9 +129,6 @@ class AsistenteController extends Controller
 
         $asistente->save();
         
-
-        $asistente->save();
-
         return redirect('/asistentes');
     }
 

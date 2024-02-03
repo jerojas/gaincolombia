@@ -42,20 +42,13 @@ class IngresoController extends Controller
             
             ->count();
 
-            $molinos = DB::table('asistentes as a')
-            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
-            ->where('a.last_name', '=', 'MOLINOS')
-            ->where('i.acceso_id', '=', $acceso_id)
-            ->count();
-                      
-          
 
        return view('ingreso.index')->with('acceso',$acceso)
                                  ->with('total_inscritos',$total_inscritos)
                                  ->with('total_ingresos',$total_ingresos)
                                  ->with('pendientes_ingresar',$pendientes_ingresar)
-                                 ->with('staff',$staff)
-                                 ->with('molinos',$molinos);            
+                                 ->with('staff',$staff);
+                                            
         
     }
 
@@ -136,12 +129,7 @@ class IngresoController extends Controller
             ->Where('i.asistente_id', $asistente_id)
             ->count();
 
-            $molinos = DB::table('asistentes as a')
-            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
-            ->where('a.last_name', '=', 'MOLINOS')
-            ->where('i.acceso_id', '=', $acceso_id)
-            ->count();
-        
+                    
         $validar_asistente = DB::table('asistentes')
         ->where('asistente_id', '=', $asistente_id) 
         ->value('asistente_id');
@@ -175,8 +163,7 @@ class IngresoController extends Controller
                                  ->with('pendientes_ingresar',$pendientes_ingresar)
                                     ->with('usado','CÓDIGO USADO')
                                    ->with('validar_ingreso','ok')
-                                   ->with('staff',$staff)
-                                   ->with('molinos',$molinos);
+                                   ->with('staff',$staff);
 
 
             }else{
@@ -213,12 +200,7 @@ class IngresoController extends Controller
             ->Where('i.asistente_id', $asistente_id)
             ->count();
     
-            $molinos = DB::table('asistentes as a')
-            ->join('ingresos as i', 'a.asistente_id', '=', 'i.asistente_id')
-            ->where('a.last_name', '=', 'MOLINOS')
-            ->where('i.acceso_id', '=', $acceso_id)
-            ->count();
-            
+                       
 
                 return view('ingreso.index')->with('asistentes',$asistentes)
                                 ->with('acceso',$acceso)
@@ -226,8 +208,8 @@ class IngresoController extends Controller
                                  ->with('total_ingresos',$total_ingresos)
                                  ->with('pendientes_ingresar',$pendientes_ingresar)
                                  ->with('asistent','INGRESO VALIDADO')
-                                 ->with('staff',$staff)
-                                 ->with('molinos',$molinos);     
+                                 ->with('staff',$staff);
+                                    
               
                   
                 }        
@@ -240,13 +222,48 @@ class IngresoController extends Controller
                                  ->with('total_ingresos',$total_ingresos)
                                  ->with('pendientes_ingresar',$pendientes_ingresar)
                                  ->with('validar_asistente','ok')
-                                 ->with('staff',$staff)
-                                 ->with('molinos',$molinos);       
+                                 ->with('staff',$staff);       
               
              }
         
          
           }
+
+   
+    public function CheckinAsistente(Request $request, $id)
+    {
+        $asistente = Asistente::find($id);
+        $acceso_id = 3;
+        
+        $validar_ingreso = DB::table('ingresos')
+        ->where('asistente_id', '=', $id)
+        ->where('acceso_id', '=', $acceso_id)
+        ->value('asistente_id');
+  
+        if ( $validar_ingreso == $id ){
+
+            return redirect('/asistentes');
+             
+            }else{
+               
+                $asistente->state = 1;
+                $asistente->save();
+        
+                $ingresos = new Ingreso();
+                $ingresos->asistente_id = $id;
+                $ingresos->acceso_id = $acceso_id;
+                $ingresos->user =\Auth::user()->name;
+                $ingresos->save();
+                return redirect('/asistentes');
+
+                }        
+            
+
+               
+        
+    }
+
+        
 
     /**
      * Display the specified resource.

@@ -19,6 +19,7 @@
 <table id="accesos" class="table table-striped table-bordered shadow-lg mt-4" style="width:100%">
     <thead class="bg-primary text-white">
         <tr>
+            <th scope="col">Ingreso</th>
             <th scope="col">Codigo</th>
             <th scope="col">Nombre Completo</th>
             <th scope="col">Distrito</th>
@@ -33,7 +34,11 @@
     </thead>
     <tbody>
         @foreach ($asistentes as $asistente)
-        <tr>
+        @if ($asistente->state=='1')
+        <tr style="background: #3DE422;">
+       
+        @endif
+        <td>{{$asistente->state}}</td>
             <td>{{$asistente->asistente_id}}</td>
             <td>{{$asistente->first_name}}</td>
             <td>{{$asistente->last_name}}</td>
@@ -46,7 +51,7 @@
            
             <td>
                 <form action="{{ route ('asistentes.destroy',$asistente->id)}}" class="form_eliminar" method="POST">
-               
+                <a href="/checkinasistente/{{ $asistente->id}}" class="btn btn-info">Check In</a>
                 <a href="/asistentes/{{ $asistente->id}}/edit" class="btn btn-info">Editar</a>
                 @csrf
                 @method('DELETE')
