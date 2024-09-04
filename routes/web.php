@@ -23,6 +23,7 @@ Route::resource('asistentes','App\Http\Controllers\AsistenteController');
 Route::resource('home','App\Http\Controllers\HomeController');
 Route::resource('accesos','App\Http\Controllers\AccesoController');
 Route::resource('ingresos','App\Http\Controllers\IngresoController');
+
 Route::get('/controlacceso/{id}', 'App\Http\Controllers\IngresoController@index');
 Route::get('/ingresos/{id}', 'App\Http\Controllers\IngresoController@store');
 Route::get('/checkin/{id}', 'App\Http\Controllers\IngresoController@checkin');
@@ -30,8 +31,7 @@ Route::get('/checkinasistente/{id}', 'App\Http\Controllers\IngresoController@Che
 Route::get('/eliminarcheckin/{id}', 'App\Http\Controllers\IngresoController@eliminarCheckin');
 
 Route::post('dash', 'App\Http\Controllers\HomeController@dash');
-
-
+Route::get('registro','App\Http\Controllers\RegistroController@create');
 
 Route::middleware([
     'auth:sanctum',
@@ -42,7 +42,7 @@ Route::middleware([
         return view('dashboard.index');
     })->name('dashboard');
 
-
+   
     Route::get('home','App\Http\Controllers\HomeController@index');
 
 });
